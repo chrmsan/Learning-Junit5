@@ -27,6 +27,16 @@ class StringTest {
 		String str = "abcdefgh";
 		boolean result = str.contains("ijk");
 		assertEquals(false, result);
+		// assertTrue(result); - optional
+	}
+	
+	@Test 
+	void split_basic() {
+		String str = "abc def ghi";
+		String actualResult[] = str.split(" ");
+		String[] expectedResult = new String[] {"abc", "def", "ghi"};
+		
+		assertArrayEquals(expectedResult, actualResult);
 	}
 
 }
