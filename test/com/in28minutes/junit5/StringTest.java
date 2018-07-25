@@ -12,6 +12,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Disabled;
+
 
 
 import org.junit.jupiter.params.ParameterizedTest;
@@ -118,6 +120,7 @@ class StringTest {
 	}
 	
 	@Test
+	@Disabled
 	void performanceTest() {
 		assertTimeout(Duration.ofSeconds(5),
 				() -> {
