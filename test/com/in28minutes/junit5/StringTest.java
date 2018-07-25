@@ -2,6 +2,8 @@ package com.in28minutes.junit5;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.time.Duration;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -114,5 +116,19 @@ class StringTest {
 		
 		assertArrayEquals(expectedResult, actualResult);
 	}
+	
+	@Test
+	void performanceTest() {
+		assertTimeout(Duration.ofSeconds(5),
+				() -> {
+					for(int i = 0; i <= 1000000; i++) {
+						int j = i;
+						System.out.println(j);
+					}
+				}
+				
+				);
+	}
+	
 
 }
