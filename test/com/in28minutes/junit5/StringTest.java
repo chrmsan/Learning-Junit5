@@ -7,11 +7,19 @@ import org.junit.jupiter.api.Test;
 class StringTest {
 
 	@Test
-	void whateveryouwant() {
+	void length_basic() {
 		int actualLength = "ABCD".length();
 		int expectedLength = 4;
 		
 		assertEquals(expectedLength, actualLength);
+	}
+	
+	@Test
+	void toUpperCase() {
+		String str = "abcd";
+		String result = str.toUpperCase();
+		
+		assertEquals("ABCD", result);
 	}
 
 }
