@@ -15,11 +15,18 @@ class StringTest {
 	}
 	
 	@Test
-	void toUpperCase() {
+	void toUpperCase_basic() {
 		String str = "abcd";
 		String result = str.toUpperCase();
 		
 		assertEquals("ABCD", result);
+	}
+	
+	@Test
+	void contains_basic() {
+		String str = "abcdefgh";
+		boolean result = str.contains("ijk");
+		assertEquals(false, result);
 	}
 
 }
